@@ -1,0 +1,56 @@
+/* src/components/Signup.css */
+
+html, body {
+  background: whitesmoke;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.signup-paper {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.signup-title {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.signup-form .MuiTextField-root {
+  background-color: #ffffff;
+}
+
+.signup-form .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #5563de;
+}
+.signup-button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #5f88e0 !important;
+  color: #ffffff !important;
+  border-radius: 4px;
+  text-decoration: none;
+  
+  
+  transition: background-color 0.2s ease;}
+.signup-button:hover {background-color: #5a62d8 !important;}
+
+.signup-text {
+  margin-top: 1rem;
+  color: #555;
+}
+
+.signup-text a {
+  color: #5563de;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+
+}

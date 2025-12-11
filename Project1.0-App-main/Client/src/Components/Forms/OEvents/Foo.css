@@ -1,0 +1,104 @@
+/* File: Food.css */
+
+/* Page Base */
+.food-page {
+  background-color: #fff;
+  color: #333;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+/* Main Container */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Section Spacing */
+.intro,
+.facts,
+.consultants,
+.providers {
+  margin-bottom: 3rem;
+}
+
+/* Lists */
+.facts ul {
+  line-height: 1.8;
+  padding-left: 1.25rem;
+}
+
+.facts ul li {
+  margin-bottom: 0.75rem;
+}
+
+/* Divider */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 2rem 0;
+}
+
+/* Cards Layout */
+.consultants .consultant-list,
+.providers .provider-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.consultant-card,
+.provider-card {
+  flex: 1 1 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.consultant-card:hover,
+.provider-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .consultants .consultant-list,
+  .providers .provider-list {
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }}

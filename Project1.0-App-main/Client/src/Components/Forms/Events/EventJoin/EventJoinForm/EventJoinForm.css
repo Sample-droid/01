@@ -1,0 +1,19 @@
+/* src/components/EventJoinForm.css */
+
+.event-join-form__container {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.event-join-form__back {
+  margin-bottom: 1rem;
+  text-transform: none;
+  color: #000000;
+}
+
+.event-join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}

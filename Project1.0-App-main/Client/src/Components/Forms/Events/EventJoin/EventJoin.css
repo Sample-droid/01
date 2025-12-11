@@ -1,0 +1,160 @@
+/* container spacing */
+.event-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+/* card layout: fixed size so grid column width + fixed height = identical boxes */
+.event-card {
+  position: relative;
+  cursor: pointer;
+  border-radius: 14px;
+  overflow: hidden;
+  height: 420px;           /* fixed total card height */
+  width: 100%;             /* grid defines width */
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border 0.18s ease;
+  box-sizing: border-box;
+}
+
+/* hover + selected visuals */
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
+
+.event-card.selected {
+  border: 2px solid #1976d2;
+  background-color: #f7fbff;
+}
+
+/* image area fixed */
+.event-image-wrap {
+  flex: 0 0 160px; /* fixed image height */
+  width: 100%;
+  overflow: hidden;
+  background: #efefef;
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* placeholder when no image */
+.event-image-placeholder {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  background: linear-gradient(180deg,#f5f7fb,#eef3fb);
+  font-size: 14px;
+}
+
+/* summary area fixed height */
+.event-summary {
+  padding: 12px 14px;
+  flex: 0 0 110px; /* fixed summary height so cards are consistent */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6px;
+  box-sizing: border-box;
+}
+
+/* title & metadata layout */
+.event-title {
+  line-height: 1.15;
+  font-weight: 700;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  color: #444;
+  font-size: 0.75rem;
+}
+
+/* short one-line description (truncated) */
+.short-desc {
+  font-size: 0.85rem;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* details overlay absolutely positioned so opening it doesn't change card size */
+.details-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0; /* collapsed by default */
+  background: rgba(255,255,255,0.98);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+  transition: height 240ms ease, box-shadow 240ms ease;
+  display: flex;
+  justify-content: center;
+}
+
+/* when open, expand to occupy the area below the summary (leaving image + summary visible) */
+.details-overlay.open {
+  height: calc(420px - 160px - 110px + 1px); /* total - image - summary (+1 for border) */
+  box-shadow: 0 -6px 18px rgba(0,0,0,0.06) inset;
+}
+
+/* inner scrollable details content */
+.details-inner {
+  padding: 12px 14px;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* nice scrollbar for WebKit */
+.details-inner::-webkit-scrollbar {
+  width: 6px;
+}
+.details-inner::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.15);
+  border-radius: 3px;
+}
+
+/* center join button and make it stick near bottom of overlay content */
+.details-inner .MuiButton-root {
+  display: inline-block;
+  margin: 12px auto 6px auto;
+}
+
+/* responsive adjustments */
+@media (max-width: 900px) {
+  .event-card { height: 440px; } /* a bit taller on smaller screens */
+  .event-summary { flex: 0 0 120px; }
+  .event-image-wrap { flex: 0 0 180px; }
+  .details-overlay.open {
+    height: calc(440px - 180px - 120px + 1px);
+  }
+
+}

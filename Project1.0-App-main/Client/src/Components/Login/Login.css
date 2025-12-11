@@ -1,0 +1,47 @@
+/* src/components/Login.css */
+
+html, body {
+  background: whitesmoke;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-paper {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+.login-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #312f2f;
+}
+
+.login-form .MuiTextField-root {
+  background-color: #ffffff;
+}
+
+.login-form .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #5563de;
+}
+
+
+.login-button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #5f88e0 !important;
+  color: #ffffff !important;
+  border-radius: 4px;
+  text-decoration: none;
+  
+  
+  transition: background-color 0.2s ease;}
+.login-button:hover {background-color: #5a62d8 !important;}

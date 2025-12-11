@@ -1,0 +1,47 @@
+/* src/components/ContactDetailsPage.css */
+
+.details-container {
+  max-width: 1000px;
+  margin: 4rem auto;
+}
+
+.details-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  padding: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.info-icon {
+  font-size: 2rem;
+  color: #1976d2;
+  margin-right: 1rem;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  color: #555;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #1976d2;
+}
+
+.form-wrapper {
+  padding: 2rem;
+}
